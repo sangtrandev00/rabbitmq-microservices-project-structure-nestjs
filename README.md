@@ -9,3 +9,6 @@
 ## Author 
 + Trần Nhật Sang
 + website: https://trannhatsang.com
+
+## Note
+Feel free to follow and star me!

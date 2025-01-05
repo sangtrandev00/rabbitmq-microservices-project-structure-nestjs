@@ -1,10 +1,17 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { GatewayController } from './controllers/gateway.controller';
+import { GatewayService } from './services/gateway.service';
+import { HttpModule } from '@nestjs/axios';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true, // Makes configuration available globally
+    }),
+    HttpModule, // Enables HTTP requests to microservices
+  ],
+  controllers: [GatewayController],
+  providers: [GatewayService],
 })
-export class AppModule {}
+export class AppModule { }

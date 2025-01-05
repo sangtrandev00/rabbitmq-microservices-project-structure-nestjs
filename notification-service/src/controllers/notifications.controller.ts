@@ -1,7 +1,7 @@
 import { Controller } from '@nestjs/common';
-import { OrdersService } from 'src/services/orders.service';
+import { NotificationsService } from 'src/services/notifications.service';
 
 @Controller('notifications')
 export class NotificationsController {
-    constructor(private readonly ordersService: OrdersService) { }
+    constructor(private readonly notificationsService: NotificationsService) { }
 }

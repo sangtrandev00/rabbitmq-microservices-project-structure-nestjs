@@ -13,7 +13,11 @@ export class GatewayService {
     ) {
         this.orderServiceUrl = this.configService.get<string>('ORDER_SERVICE_URL');
     }
+
     async createOrder(createOrderDto: any) {
+
+        console.log("order url", this.orderServiceUrl);
+
         const response = await lastValueFrom(this.httpService.post(
             `${this.orderServiceUrl}/orders`,
             createOrderDto,

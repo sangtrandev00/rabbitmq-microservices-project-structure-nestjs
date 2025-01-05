@@ -5,7 +5,7 @@ import { Notification } from "src/entities/notification.entity";
 import { Repository } from "typeorm";
 
 @Injectable()
-export class OrdersService {
+export class NotificationsService {
 
     constructor(
         @InjectRepository(Notification) private readonly notificationRepository: Repository<Notification>,

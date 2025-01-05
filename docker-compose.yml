@@ -23,6 +23,14 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
 
+  mongodb:  # Added MongoDB service here
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"  # Expose MongoDB on port 27017
+    volumes:
+      - mongodb_data:/data/db  # Persist data
+
   redis:
     image: redis:6
     container_name: redis
@@ -118,4 +126,5 @@ services:
   #     - rabbitmq
 
 volumes:
-  db_data:
+  db_data: {}  # Define the volume for PostgreSQL
+  mongodb_data: {}  # Ensure this volume is defined for MongoDB

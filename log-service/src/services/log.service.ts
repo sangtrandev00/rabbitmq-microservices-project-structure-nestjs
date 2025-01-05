@@ -5,7 +5,7 @@ import { Log } from "src/entities/log.entity";
 import { Repository } from "typeorm";
 
 @Injectable()
-export class OrdersService {
+export class LogService {
 
     constructor(
         @InjectRepository(Log) private readonly logRepository: Repository<Log>,

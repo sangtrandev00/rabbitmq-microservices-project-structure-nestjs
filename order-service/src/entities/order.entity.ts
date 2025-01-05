@@ -1,6 +1,16 @@
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
+@Entity()
 export class Order {
+    @PrimaryGeneratedColumn()
     id: number;
-    productId: number;
+
+    @Column()
+    productName: string;
+
+    @Column()
     quantity: number;
+
+    @Column()
+    totalPrice: number;
 }
